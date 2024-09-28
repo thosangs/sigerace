@@ -8,13 +8,13 @@ import Footer from "@/components/layout/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://racephoria.pages.dev"),
-	title: "X-Anda | Racephoria",
+	metadataBase: new URL("https://tikum.pages.dev"),
+	title: "Titik Kumpul | Exhibition Race",
 	verification: {
 		google: process.env.GOOGLE_VERIFICATION || "",
 	},
 	description:
-		"X-Anda | Racephoria by Pushbike Lampung Academy ~ Lampung Selatan",
+		"Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 };
 
 export default function RootLayout({

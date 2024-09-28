@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
 			allow: ["/", "/peraturan", "/jadwal", "/livescore"],
 			disallow: "",
 		},
-		sitemap: "https://racephoria.pages.dev/sitemap.xml",
+		sitemap: "https://tikum.pages.dev/sitemap.xml",
 	};
 }

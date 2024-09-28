@@ -15,7 +15,7 @@ export default function Home() {
 				src={logo_text_image}
 				placeholder="blur"
 				className="m-0 mt-11 sm:mt-10 pb-2 w-11/12 sm:w-4/12"
-				alt="racephoria"
+				alt="tikum"
 			/>
 			<nav className="w-full max-w-md grid gap-2 px-4">
 				<Link

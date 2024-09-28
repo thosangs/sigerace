@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: "X-Anda | Racephoria",
-		short_name: "X-Anda | Racephoria",
+		name: "Titik Kumpul | Exhibition Race",
+		short_name: "Titik Kumpul | Exhibition Race",
 		description:
-			"X-Anda | Racephoria by Pushbike Lampung Academy ~ Lampung Selatan",
+			"Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 		start_url: "/",
 		display: "standalone",
 		background_color: "#fff",

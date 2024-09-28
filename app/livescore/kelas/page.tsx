@@ -170,7 +170,7 @@ function KelasActive() {
 						src={icon_image}
 						placeholder="blur"
 						className="my-0 py-2 mx-2 inline-block w-2/12"
-						alt="racephoria"
+						alt="tikum"
 					/>
 					<span className="inline-block font-bold text-background text-3xl align-middle">
 						{tahun?.toUpperCase().startsWith("FFA") ? "FFA" : tahun?.toUpperCase()}

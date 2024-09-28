@@ -12,9 +12,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "X-Anda Racephoria | Livescore",
+	title: "Titik Kumpul Exhibition Race | Livescore",
 	description:
-		"Livescore kompetisi X-Anda | Racephoria by Pushbike Lampung Academy ~ Lampung Selatan",
+		"Livescore kompetisi Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 };
 
 const typeStyles = {

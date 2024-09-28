@@ -2,9 +2,9 @@ import listJadwal from "@/lib/jadwal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "X-Anda Racephoria | Jadwal",
+	title: "Titik Kumpul Exhibition Race | Jadwal",
 	description:
-		"Jadwal kompetisi X-Anda | Racephoria by Pushbike Lampung Academy ~ Lampung Selatan",
+		"Jadwal kompetisi Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 };
 
 export default function Jadwal() {

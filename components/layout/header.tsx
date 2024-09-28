@@ -19,7 +19,7 @@ export default function Header() {
 							src={text_image}
 							placeholder="blur"
 							className="m-0 p-0 w-2/12"
-							alt="racephoria"
+							alt="tikum"
 						/>
 					</h1>
 				</div>
