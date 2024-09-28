@@ -15,6 +15,8 @@ import { useSearchParams } from "next/navigation";
 import { LoadingSpinner } from "@/components/ui/icons";
 import Image from "next/image";
 import icon_image from "@/public/icon.webp";
+import batch_2 from "@/public/2-batch.svg";
+import batch_3 from "@/public/3-batch.svg";
 
 function modifyTableHeaders(headers: string[]): string[] {
 	const headerCount: { [key: string]: number } = {};
@@ -110,6 +112,7 @@ function KelasActive() {
 	const searchParams = useSearchParams();
 	const tahun = searchParams.get("tahun") || "";
 	const tipe = searchParams.get("tipe") || "";
+	let compGraph = null;
 
 	const [data, setData] = useState<Record<string, any> | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
@@ -158,6 +161,28 @@ function KelasActive() {
 		);
 	}
 
+	if (Object.keys(data[tahun][tipe]).length === 4) {
+		compGraph = (
+			<Image
+				src="/2-batch.svg"
+				width={0}
+				height={0}
+				className="my-0 py-2 px-8 mx-2 inline-block w-full sm:w-6/12"
+				alt="tikum"
+			/>
+		);
+	} else if (Object.keys(data[tahun][tipe]).length === 9) {
+		compGraph = (
+			<Image
+				src="/3-batch.svg"
+				width={0}
+				height={0}
+				className="my-0 py-2 mx-2 inline-block w-full sm:w-6/12"
+				alt="tikum"
+			/>
+		);
+	}
+
 	return (
 		<>
 			<div className="my-2 mx-auto">
@@ -178,6 +203,7 @@ function KelasActive() {
 				</div>
 				<hr />
 			</div>
+			{compGraph}
 			<div
 				className={`${
 					Object.keys(data[tahun][tipe]).length === 1
