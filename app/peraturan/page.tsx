@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Peraturan() {
 	return (
-		<div className="px-2 py-4">
+		<div className="px-2 py-4 mb-12">
 			<div className="w-full max-w-3xl bg-background rounded-lg shadow-lg p-6">
 				<h2 className="text-xl font-bold text-primary mb-4">Peraturan</h2>
 				<div className="space-y-4">
@@ -19,9 +19,9 @@ export default function Peraturan() {
 								{category}
 							</h3>
 							<hr className="pb-2" />
-							<ol className="list-decimal list-inside text-muted-foreground">
+							<ol className="pl-4 list-decimal list-outside text-muted-foreground">
 								{items.map((rule, index) => (
-									<li key={index} className="pb-2 text-xs">
+									<li key={index} className="pb-2 text-xs ">
 										{rule}
 									</li>
 								))}

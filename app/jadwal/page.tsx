@@ -17,14 +17,16 @@ export default function Jadwal() {
 					jadwal race yang dicantumkan
 				</div>
 			</div>
-			<div className="w-full max-w-3xl bg-background rounded-lg shadow-lg p-4 my-4">
+			<div className="w-full max-w-3xl bg-background rounded-lg shadow-lg p-4 mt-4 mb-12">
 				<h2 className="text-2xl font-bold text-primary mb-4">Jadwal</h2>
 				<div className="overflow-x-auto">
 					<table className="w-full text-muted-foreground text-sm">
 						<thead>
 							<tr className="border-b">
 								<th className="p-4 text-left font-semibold whitespace-nowrap">Event</th>
-								<th className="p-4 text-left font-semibold whitespace-nowrap">Waktu</th>
+								<th className="p-4 text-center font-semibold whitespace-nowrap">
+									Waktu
+								</th>
 								<th className="p-4 text-left font-semibold whitespace-nowrap">
 									Catatan
 								</th>
@@ -34,7 +36,7 @@ export default function Jadwal() {
 							{listJadwal.map((event, index) => (
 								<tr className="border-b" key={index}>
 									<td className="p-2 whitespace-nowrap">{event.details}</td>
-									<td className="p-2 whitespace-nowrap">{event.time}</td>
+									<td className="p-2 whitespace-nowrap text-center">{event.time}</td>
 									<td className="p-2 whitespace-nowrap">{event.note}</td>
 								</tr>
 							))}
