@@ -25,7 +25,7 @@ export default function RootLayout({
 	return (
 		<html suppressHydrationWarning lang="en">
 			<body className={inter.className}>
-				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+				<ThemeProvider attribute="class" defaultTheme="dark">
 					<div className="flex flex-col min-h-screen bg-gradient-to-b from-primary dark:to-primary-foreground to-primary">
 						<Header />
 
