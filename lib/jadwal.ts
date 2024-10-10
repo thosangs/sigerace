@@ -1,7 +1,7 @@
 const listJadwal = [
 	{
 		details: "REGISTRASI",
-		time: "07:00 - 13:51",
+		time: "07:00 - 11:30",
 		note: "-",
 	},
 	{
