@@ -15,8 +15,6 @@ import { useSearchParams } from "next/navigation";
 import { LoadingSpinner } from "@/components/ui/icons";
 import Image from "next/image";
 import icon_image from "@/public/icon.webp";
-import batch_2 from "@/public/2-batch.svg";
-import batch_3 from "@/public/3-batch.svg";
 
 function modifyTableHeaders(headers: string[]): string[] {
 	const headerCount: { [key: string]: number } = {};

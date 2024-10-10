@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
 	const apiUrl = process.env.APPSCRIPT_SHEET_API || "";
 	const payload = {
 		[year]: {
-			[type]: ranges[year]?.[type],
+			[type]: ranges[year][type],
 		},
 	};
 	try {
@@ -45,7 +45,6 @@ export async function GET(req: NextRequest) {
 		}
 
 		let data = await response.json();
-
 		// Process the data to replace empty header columns
 		if (data && data[year] && data[year][type]) {
 			for (const competition in data[year][type]) {
