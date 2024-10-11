@@ -2,7 +2,7 @@ import listJadwal from "@/lib/jadwal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Titik Kumpul | Jadwal",
+	title: "Jadwal | Titik Kumpul",
 	description:
 		"Jadwal kompetisi Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 };

@@ -15,27 +15,27 @@ const listJadwal = [
 		note: "-",
 	},
 	{
-		details: "2021 BOY & GIRL",
+		details: "2021 GIRL & BOY",
 		time: "09:00 - 10:00",
 		note: "-",
 	},
 	{
-		details: "2020 BOY & GIRL",
+		details: "2020 GIRL & BOY",
 		time: "10:00 - 10:30",
 		note: "-",
 	},
 	{
-		details: "2019 BOY - 2019/18 GIRL",
+		details: "2019/18 GIRL - 2019 BOY",
 		time: "10:30 - 11:00",
 		note: "-",
 	},
 	{
-		details: "2017 & 2018 BOY",
+		details: "2018 & 2017 BOY",
 		time: "11:00 - 11:30",
 		note: "-",
 	},
 	{
-		details: "FFA BOY & GIRL",
+		details: "FFA GIRL & BOY",
 		time: "11:30 - 13:00",
 		note: "-",
 	},

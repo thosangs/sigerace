@@ -4,6 +4,7 @@ import {
 	CalendarIcon,
 	ChevronRightIcon,
 	BookIcon,
+	IconGift,
 } from "@/components/ui/icons";
 import Image from "next/image";
 import logo_text_image from "@/public/logo-text.webp";
@@ -54,6 +55,17 @@ export default function Home() {
 					<div className="flex items-center gap-2">
 						<CalendarIcon className="w-6 h-6" />
 						<span>Jadwal Race</span>
+					</div>
+					<ChevronRightIcon className="w-6 h-6" />
+				</Link>
+				<Link
+					href="/doorprize"
+					className="bg-background text-secondary-foreground rounded-lg p-4 flex items-center justify-between hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+					prefetch={false}
+				>
+					<div className="flex items-center gap-2">
+						<IconGift className="w-6 h-6" />
+						<span>Doorprize</span>
 					</div>
 					<ChevronRightIcon className="w-6 h-6" />
 				</Link>
