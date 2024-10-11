@@ -12,7 +12,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Titik Kumpul Exhibition Race | Livescore",
+	title: "Titik Kumpul | Livescore",
 	description:
 		"Livescore kompetisi Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 };

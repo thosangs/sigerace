@@ -2,7 +2,7 @@ import rules from "@/lib/peraturan";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Titik Kumpul Exhibition Race | Peraturan",
+	title: "Titik Kumpul | Peraturan",
 	description:
 		"Peraturan umum yang wajib diikuti oleh peserta Titik Kumpul | Exhibition Race by Pushbike Lampung Academy ~ Metro",
 };
