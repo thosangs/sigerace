@@ -159,27 +159,27 @@ function KelasActive() {
 		);
 	}
 
-	if (Object.keys(data[tahun][tipe]).length === 4) {
-		compGraph = (
-			<Image
-				src="/2-batch.svg"
-				width={0}
-				height={0}
-				className="my-0 py-2 px-8 mx-2 inline-block w-full sm:w-6/12"
-				alt="tikum"
-			/>
-		);
-	} else if (Object.keys(data[tahun][tipe]).length === 9) {
-		compGraph = (
-			<Image
-				src="/3-batch.svg"
-				width={0}
-				height={0}
-				className="my-0 py-2 mx-2 inline-block w-full sm:w-6/12"
-				alt="tikum"
-			/>
-		);
-	}
+	// if (Object.keys(data[tahun][tipe]).length === 4) {
+	// 	compGraph = (
+	// 		<Image
+	// 			src="/2-batch.svg"
+	// 			width={0}
+	// 			height={0}
+	// 			className="my-0 py-2 px-8 mx-2 inline-block w-full sm:w-6/12"
+	// 			alt="tikum"
+	// 		/>
+	// 	);
+	// } else if (Object.keys(data[tahun][tipe]).length === 9) {
+	// 	compGraph = (
+	// 		<Image
+	// 			src="/3-batch.svg"
+	// 			width={0}
+	// 			height={0}
+	// 			className="my-0 py-2 mx-2 inline-block w-full sm:w-6/12"
+	// 			alt="tikum"
+	// 		/>
+	// 	);
+	// }
 
 	return (
 		<>
@@ -201,7 +201,7 @@ function KelasActive() {
 				</div>
 				<hr />
 			</div>
-			{compGraph}
+			{/* {compGraph} */}
 			<div
 				className={`${
 					Object.keys(data[tahun][tipe]).length === 1
