@@ -18,7 +18,7 @@ export default function Home() {
         className="m-0 py-5 mt-12 sm:mt-11 pb-2 sm:w-10/12 md:w-3/12"
         alt="sigerace"
       />
-      <nav className="w-full max-w-md grid gap-2 px-4">
+      <nav className="w-full max-w-md grid gap-2 px-4 mt-6">
         <Link
           href="/peraturan"
           className="bg-gradient-to-r from-background via-background to-background/90 text-secondary-foreground rounded-lg p-4 flex items-center justify-between hover:from-primary/10 hover:via-accent/20 hover:to-accent/10 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring transition-all duration-300"
