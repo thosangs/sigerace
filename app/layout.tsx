@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sigerace.pages.dev"),
-  title: "Sigerace 2025 | Exhibition Race",
+  title: "Sigerace 2025 | Championship",
   verification: {
     google: process.env.GOOGLE_VERIFICATION || "",
   },
