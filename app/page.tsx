@@ -15,7 +15,7 @@ export default function Home() {
       <Image
         src={logo_text_image}
         placeholder="blur"
-        className="m-0 mt-1 sm:mt-1 pb-2 w-8/12 sm:w-2/12"
+        className="m-0 py-5 mt-12 sm:mt-11 pb-2 sm:w-10/12 md:w-3/12"
         alt="sigerace"
       />
       <nav className="w-full max-w-md grid gap-2 px-4">
@@ -54,7 +54,7 @@ export default function Home() {
         >
           <div className="flex items-center gap-2">
             <CalendarIcon className="w-6 h-6" />
-            <span>Jadwal Race</span>
+            <span>Jadwal & Lokasi Race</span>
           </div>
           <ChevronRightIcon className="w-6 h-6" />
         </Link>

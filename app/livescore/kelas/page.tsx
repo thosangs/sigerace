@@ -111,7 +111,6 @@ function KelasActive() {
   const searchParams = useSearchParams();
   const tahun = searchParams.get("tahun") || "";
   const tipe = searchParams.get("tipe") || "";
-  let compGraph = null;
 
   const [data, setData] = useState<Record<string, any> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -170,7 +169,7 @@ function KelasActive() {
           <Image
             src={icon_image}
             placeholder="blur"
-            className="my-0 py-2 mx-2 inline-block w-2/12"
+            className="my-0 py-2 mx-2 inline-block w-1/12"
             alt="sigerace"
           />
           <span className="inline-block font-bold text-background text-3xl align-middle">
