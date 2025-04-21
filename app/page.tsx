@@ -89,14 +89,22 @@ export default function Home() {
       </nav>
 
       <Dialog open={showQR} onOpenChange={setShowQR}>
-        <DialogContent className="sm:max-w-md bg-white">
-          <div className="flex justify-center">
+        <DialogContent className="sm:max-w-md bg-gray-300">
+          <div className="">
             <Image
               src={qr_image}
               alt="QR Code"
               className="w-full h-auto"
               placeholder="blur"
             />
+            <div className="mt-4 flex justify-center">
+              <button
+                onClick={() => setShowQR(false)}
+                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              >
+                Tutup
+              </button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
