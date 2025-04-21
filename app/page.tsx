@@ -22,7 +22,7 @@ export default function Home() {
       <Image
         src={logo_text_image}
         placeholder="blur"
-        className="m-0 py-5 mt-12 sm:mt-11 pb-2 sm:w-10/12 md:w-3/12"
+        className="m-0 py-5 mt-5 sm:mt-11 pb-2 sm:w-10/12 md:w-3/12"
         alt="sigerace"
       />
       <nav className="w-full max-w-md grid gap-2 px-4 mt-6">
