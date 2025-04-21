@@ -1,15 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import {
   IconFlagCheckered,
   CalendarIcon,
   ChevronRightIcon,
   BookIcon,
-  IconGift,
+  QrCodeIcon,
 } from "@/components/ui/icons";
 import Image from "next/image";
 import logo_text_image from "@/public/logo-text.webp";
+import qr_image from "@/public/qr.webp";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export default function Home() {
+  const [showQR, setShowQR] = useState(false);
+
   return (
     <>
       <Image
@@ -69,7 +76,30 @@ export default function Home() {
           </div>
           <ChevronRightIcon className="w-6 h-6" />
         </Link> */}
+        <button
+          onClick={() => setShowQR(true)}
+          className="bg-gradient-to-r from-background via-background to-background/90 text-secondary-foreground rounded-lg p-4 flex items-center justify-between hover:from-primary/10 hover:via-accent/20 hover:to-accent/10 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring transition-all duration-300"
+        >
+          <div className="flex items-center gap-2">
+            <QrCodeIcon className="w-6 h-6" />
+            <span>QR Code</span>
+          </div>
+          <ChevronRightIcon className="w-6 h-6" />
+        </button>
       </nav>
+
+      <Dialog open={showQR} onOpenChange={setShowQR}>
+        <DialogContent className="sm:max-w-md bg-white">
+          <div className="flex justify-center">
+            <Image
+              src={qr_image}
+              alt="QR Code"
+              className="w-full h-auto"
+              placeholder="blur"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
