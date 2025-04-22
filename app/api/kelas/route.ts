@@ -26,6 +26,9 @@ export async function GET(req: NextRequest) {
 
   // Get the API URL from the environment variables
   const apiUrl = process.env.APPSCRIPT_SHEET_API || "";
+  if (!apiUrl || apiUrl === "") {
+    return NextResponse.json({ error: "API URL not found" }, { status: 500 });
+  }
   const payload = {
     [year]: {
       [type]: ranges[year][type],
@@ -87,9 +90,6 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json(data, { status: 200 });
   } catch (error: any) {
-    return NextResponse.json(
-      { error: error.message + apiUrl + "Check the API URL" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
