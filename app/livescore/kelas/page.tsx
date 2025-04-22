@@ -146,9 +146,9 @@ function KelasActive() {
   return (
     <>
       <div className="my-2 mx-auto">
-        <hr />
+        <hr className="h-1 bg-gradient-to-r from-foreground via-red-500 to-yellow-500" />
         <div className="text-center">
-          <span className="inline-block font-bold text-background text-3xl align-middle">
+          <span className="inline-block font-bold bg-gradient-to-r from-red-500 via-yellow-500 to-foreground bg-clip-text text-transparent text-3xl align-middle">
             {tipe?.toUpperCase()}
           </span>
           <Image
@@ -157,13 +157,13 @@ function KelasActive() {
             className="my-0 py-2 mx-2 inline-block w-1/12"
             alt="sigerace"
           />
-          <span className="inline-block font-bold text-background text-3xl align-middle">
+          <span className="inline-block font-bold bg-gradient-to-r from-red-500 via-yellow-500 to-foreground bg-clip-text text-transparent text-3xl align-middle">
             {tahun?.toUpperCase().startsWith("FFA")
               ? "FFA"
               : tahun?.toUpperCase()}
           </span>
         </div>
-        <hr />
+        <hr className="h-1 bg-gradient-to-r from-foreground via-red-500 to-yellow-500" />
       </div>
       {/* {compGraph} */}
       <div
