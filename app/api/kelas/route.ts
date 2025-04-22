@@ -4,7 +4,6 @@ import { ranges } from "@/lib/kelas";
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
-  return NextResponse.json({ error: "Debug Mode" }, { status: 400 });
   const { searchParams } = new URL(req.url);
   const year = searchParams.get("tahun") || "";
   const type = searchParams.get("tipe") as YearType;
