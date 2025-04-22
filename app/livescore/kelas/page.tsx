@@ -16,23 +16,6 @@ import { LoadingSpinner } from "@/components/ui/icons";
 import Image from "next/image";
 import icon_image from "@/public/icon.webp";
 
-function modifyTableHeaders(headers: string[]): string[] {
-  const headerCount: { [key: string]: number } = {};
-
-  return headers.map((header) => {
-    if (header.startsWith("MOTO")) {
-      if (!headerCount[header]) {
-        headerCount[header] = 1;
-        return `START ${header}`;
-      } else {
-        headerCount[header]++;
-        return `FINISH ${header}`;
-      }
-    }
-    return header;
-  });
-}
-
 function getEmoji(rankCell: string): any {
   switch (rankCell) {
     case "1":
@@ -61,7 +44,7 @@ const renderTable = (bracketTitle: string, rows: string[][]) => (
       <Table>
         <TableHeader className="bg-muted">
           <TableRow>
-            {modifyTableHeaders(rows[0]).map((header, index) => (
+            {rows[0].map((header, index) => (
               <TableHead key={index} className="text-center">
                 {header}
               </TableHead>
@@ -90,7 +73,7 @@ const renderTable = (bracketTitle: string, rows: string[][]) => (
 									`}
                 >
                   {bracketTitle.toLowerCase().startsWith("final") &&
-                  rows[0][cellIndex].toUpperCase() === "POSISI" ? (
+                  rows[0][cellIndex].toUpperCase() === "TOTAL POINT" ? (
                     <span className={`${parseInt(cell) > 3 ? "" : "text-3xl"}`}>
                       {getEmoji(cell.toString())}
                     </span>
