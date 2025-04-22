@@ -64,16 +64,18 @@ const renderTable = (bracketTitle: string, rows: string[][]) => (
                       : "text-center capitalize"
                   }
 									${
-                    rows[0][cellIndex] === "POIN" ||
-                    rows[0][cellIndex] === "RANK" ||
-                    rows[0][cellIndex] === "POSISI"
-                      ? "text-primary font-bold"
+                    rows[0][cellIndex] === "TOTAL POINT" ||
+                    rows[0][cellIndex] === "RANKING" ||
+                    rows[0][cellIndex] === "GATE 1" ||
+                    rows[0][cellIndex] === "GATE 2" ||
+                    rows[0][cellIndex] === "GATE 3"
+                      ? "text-primary font-semibold"
                       : ""
                   }
 									`}
                 >
                   {bracketTitle.toLowerCase().startsWith("final") &&
-                  rows[0][cellIndex].toUpperCase() === "TOTAL POINT" ? (
+                  rows[0][cellIndex].toUpperCase() === "RANKING" ? (
                     <span className={`${parseInt(cell) > 3 ? "" : "text-3xl"}`}>
                       {getEmoji(cell.toString())}
                     </span>

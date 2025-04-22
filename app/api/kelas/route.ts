@@ -3,6 +3,12 @@ import { ranges } from "@/lib/kelas";
 
 export const runtime = "edge";
 
+interface RaceRow {
+  row: any[];
+  originalIndex: number;
+  totalPoint: number;
+}
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const year = searchParams.get("tahun") || "";
@@ -39,6 +45,7 @@ export async function GET(req: NextRequest) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "cache-control": "no-store",
       },
       body: JSON.stringify(payload),
     });
@@ -58,6 +65,10 @@ export async function GET(req: NextRequest) {
           // Process headers first
           if (results.length > 0) {
             const headers = results[0];
+
+            // Add RANKING column to headers
+            headers.push("RANKING");
+
             let motoCount = 1;
             for (let i = 0; i < headers.length; i++) {
               if (headers[i] === "GATE") {
@@ -67,13 +78,54 @@ export async function GET(req: NextRequest) {
                 motoCount++;
               }
             }
+
+            // Get index of TOTAL POINT column
+            const totalPointIndex = headers.findIndex(
+              (h: string) => h === "TOTAL POINT"
+            );
+
+            if (totalPointIndex !== -1 && results.length > 1) {
+              // Create array of rows with their original indices
+              const rowsWithIndices: RaceRow[] = results
+                .slice(1)
+                .map((row: any[], index: number) => ({
+                  row,
+                  originalIndex: index + 1,
+                  totalPoint:
+                    typeof row[totalPointIndex] === "number"
+                      ? row[totalPointIndex]
+                      : Infinity,
+                }));
+
+              // Sort by TOTAL POINT
+              rowsWithIndices.sort(
+                (a: RaceRow, b: RaceRow) => a.totalPoint - b.totalPoint
+              );
+
+              // Assign rankings and update original rows
+              let currentRank = 1;
+              let previousScore: number | null = null;
+
+              rowsWithIndices.forEach((item: RaceRow, index: number) => {
+                // If score is different from previous, assign new rank
+                // If score is same as previous, use same rank
+                if (previousScore !== item.totalPoint) {
+                  currentRank = index + 1;
+                }
+                previousScore = item.totalPoint;
+
+                // Add ranking to the original row
+                results[item.originalIndex].push(currentRank);
+              });
+            }
           }
 
           // Process each row after headers
           for (let i = 1; i < results.length; i++) {
             const row = results[i];
             // Format each cell in the row
-            for (let j = 0; j < row.length; j++) {
+            for (let j = 0; j < row.length - 1; j++) {
+              // -1 to skip ranking column
               const value = row[j];
               // Check if the value is a number and not an empty string
               if (typeof value === "number" && !isNaN(value)) {
@@ -88,8 +140,21 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    return NextResponse.json(data, { status: 200 });
+    return NextResponse.json(data, {
+      status: 200,
+      headers: {
+        "cache-control": "no-store",
+      },
+    });
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json(
+      { error: error.message },
+      {
+        status: 500,
+        headers: {
+          "cache-control": "no-store",
+        },
+      }
+    );
   }
 }
