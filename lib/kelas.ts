@@ -14,7 +14,7 @@ export const ranges: Dictionary = {
   },
   "2022": {
     girl: 2,
-    boy: 4,
+    boy: 5,
   },
   "2021": {
     girl: 1,
@@ -22,11 +22,11 @@ export const ranges: Dictionary = {
   },
   "2020": {
     girl: 2,
-    boy: 3,
+    boy: 4,
   },
   "2019": {
     girl: 2,
-    boy: 4,
+    boy: 5,
   },
   "2018": {
     girl: 1,

@@ -5,18 +5,18 @@ const listJadwal = [
     note: "-",
   },
   {
-    details: "PEMBUKAAN TEST TRACK",
-    time: "07:00 - 08:00",
+    details: "PEMBUKAAN & TEST TRACK",
+    time: "07:00 - 07:30",
     note: "-",
   },
   {
     details: "2023 MIX",
-    time: "08:00 - 08:12",
+    time: "07:30 - 07:42",
     note: "-",
   },
   {
     details: "2022 BOYS",
-    time: "08:12 - 09:22",
+    time: "07:42 - 09:22",
     note: "-",
   },
   {
@@ -36,17 +36,17 @@ const listJadwal = [
   },
   {
     details: "2019 BOYS",
-    time: "10:10 - 11:20",
+    time: "10:40 - 11:50",
     note: "-",
   },
   {
     details: "2019 GIRLS",
-    time: "11:20 - 11:44",
+    time: "11:50 - 12:14",
     note: "-",
   },
   {
-    details: "ISOMA",
-    time: "12:00 - 13:00",
+    details: "ISHOMA",
+    time: "12:14 - 13:00",
     note: "-",
   },
   {
@@ -61,22 +61,22 @@ const listJadwal = [
   },
   {
     details: "2020 BOYS",
-    time: "15:42 - 16:42",
+    time: "15:42 - 16:52",
     note: "-",
   },
   {
     details: "2020 GIRLS",
-    time: "16:42 - 17:06",
+    time: "16:52 - 17:16",
     note: "-",
   },
   {
-    details: "FFA MAX 2015 BOYS",
-    time: "17:06 - 17:36",
+    details: "FFA BOYS",
+    time: "17:16 - 17:46",
     note: "-",
   },
   {
-    details: "FFA MAX 2015 GIRLS",
-    time: "17:06 - 17:36",
+    details: "FFA GIRLS",
+    time: "17:16 - 17:46",
     note: "-",
   },
 ];

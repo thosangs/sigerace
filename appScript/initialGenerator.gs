@@ -31,10 +31,10 @@ function createSheetFromBatch(newSheetName, batchNumber, label) {
 function createAllSheetsFromJSON() {
   const batchMap = {
     2023: { mix: 1 },
-    2022: { girl: 2, boy: 4 },
+    2022: { girl: 2, boy: 5 },
     2021: { girl: 1, boy: 6 },
-    2020: { girl: 2, boy: 3 },
-    2019: { girl: 2, boy: 4 },
+    2020: { girl: 2, boy: 4 },
+    2019: { girl: 2, boy: 5 },
     2018: { girl: 1, boy: 1 },
     FFA: { girl: 1, boy: 1 },
   };
