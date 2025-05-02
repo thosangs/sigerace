@@ -59,7 +59,8 @@ const renderTable = (bracketTitle: string, rows: string[][]) => (
                   key={cellIndex}
                   className={`p-2 ${
                     rows[0][cellIndex] === "NAMA" ||
-                    rows[0][cellIndex] === "KOMUNITAS"
+                    rows[0][cellIndex] === "TEAM" ||
+                    rows[0][cellIndex] === "JULUKAN"
                       ? "whitespace-nowrap text-left capitalize"
                       : "text-center capitalize"
                   }

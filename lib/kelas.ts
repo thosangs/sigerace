@@ -1,10 +1,10 @@
 export const orderedYears = [
   "2023",
   "2022",
+  "2018",
+  "2019",
   "2021",
   "2020",
-  "2019",
-  "2018",
   "FFA",
 ];
 
@@ -13,27 +13,27 @@ export const ranges: Dictionary = {
     mix: 1,
   },
   "2022": {
-    girl: 2,
     boy: 5,
+    girl: 2,
   },
   "2021": {
-    girl: 1,
     boy: 6,
+    girl: 1,
   },
   "2020": {
-    girl: 2,
     boy: 4,
+    girl: 2,
   },
   "2019": {
-    girl: 2,
     boy: 5,
+    girl: 2,
   },
   "2018": {
-    girl: 1,
     boy: 1,
+    girl: 1,
   },
   FFA: {
-    girl: 1,
     boy: 1,
+    girl: 1,
   },
 };
