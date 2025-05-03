@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://sigerace.pages.dev/peraturan",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 0.8,
     },
     {
@@ -23,7 +23,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://sigerace.pages.dev/jadwal",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
+    {
+      url: "https://sigerace.pages.dev/sponsor",
+      lastModified: new Date(),
+      changeFrequency: "daily",
       priority: 0.8,
     },
   ];

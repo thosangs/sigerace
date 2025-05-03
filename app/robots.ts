@@ -4,7 +4,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/peraturan", "/jadwal", "/livescore"],
+      allow: ["/", "/peraturan", "/jadwal", "/livescore", "/sponsor"],
       disallow: "",
     },
     sitemap: "https://sigerace.pages.dev/sitemap.xml",
