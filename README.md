@@ -290,3 +290,142 @@ flowchart TD
 ```
 
 ---
+
+# Sistem Kualifikasi Lomba Racing
+
+## 1 Grup
+
+```mermaid
+flowchart TD
+  A1[Moto 1-3] --> |Kalkulasi Poin| A3[Final]
+```
+
+## 2 Grup
+
+```mermaid
+flowchart TD
+  B1[Moto 1-2] --> |P1-P4| B3a[Final Grand Champion]
+  B1 --> |P5-P8| B3b[Final Champion]
+```
+
+## 3 Grup
+
+```mermaid
+flowchart TD
+  C1[Moto 1-2] --> |P1-P4| C3a[Semifinal]
+  C1 --> |P5-P6| C3b[Kualifikasi]
+  C1 --> |P7-P8| C3c[Final Pro]
+
+  C3b --> |P1-P4| C3a
+  C3b --> |P5-P6| C3c
+
+  C3a --> |P1-P4| C4a[Final Grand Champion]
+  C3a --> |P5-P6| C4b[Final Champion]
+```
+
+## 4 Grup
+
+```mermaid
+flowchart TD
+  D1[Moto 1-2] --> |P1-P4| D3a[Semifinal]
+  D1 --> |P5-P6| D3b[Final Pro]
+  D1 --> |P7-P8| D3c[Final Novice]
+
+  D3a --> |P1-P4| D4a[Final Grand Champion]
+  D3a --> |P5-P6| D4b[Final Champion]
+```
+
+## 5 Grup
+
+```mermaid
+flowchart TD
+  E1[Moto 1-2] --> |P1-P2| E3a[Semifinal]
+  E1 --> |P3-P5| E3b[Quarter Final]
+  E1 --> |P6| E3c[Final Novice]
+  E1 --> |P7| E3d[Kualifikasi]
+  E1 --> |P8| E3e[Final Rookie]
+
+  E3b --> |P1-P3| E3a
+  E3b --> |P4-P7| E4c[Final Pro]
+  E3b --> |P8| E3c
+
+  E3d --> |P1-P2| E3c
+  E3d --> |P3-P5| E3e
+
+  E3a --> |P1-P4| E4a[Final Grand Champion]
+  E3a --> |P5-P6| E4b[Final Champion]
+```
+
+## 6 Grup
+
+```mermaid
+flowchart TD
+  F1[Moto 1-2] --> |P1-P2| F3a[Semifinal]
+  F1 --> |P3-P4| F3b[Quarter Final]
+  F1 --> |P5-P6| F3c[Kualifikasi Quarter]
+  F1 --> |P7| F3d[Kualifikasi Final Rookie]
+  F1 --> |P8| F3e[Final Beginner]
+
+  F3c --> |P1-P2| F3b
+  F3c --> |P3-P4| F4d[Final Novice]
+  F3c --> |P5-P6| F4e[Final Rookie]
+
+  F3d --> |P1-P4| F5a[Kualifikasi Final Rookie]
+  F3d --> |P5-P6| F3e
+
+  F5a --> |P1-P4| F4e
+  F5a --> |P5-P6| F3e
+
+  F3b --> |P1-P2| F3a
+  F3b --> |P3-P6| F4c[Final Pro]
+  F3b --> |P7-P8| F4d
+
+  F3a --> |P1-P4| F4a[Final Grand Champion]
+  F3a --> |P5-P6| F4b[Final Champion]
+```
+
+## 7 Grup
+
+```mermaid
+flowchart TD
+  G1[Moto 1-2] --> |P1-P2| G3a[Semifinal]
+  G1 --> |P3-P4| G3b[Quarter Final]
+  G1 --> |P5-P6| G3c[Kualifikasi Quarter]
+  G1 --> |P7| G3d[Kualifikasi Final Beginner]
+  G1 --> |P8| G3e[Final Amateur]
+
+  G3c --> |P1| G3b
+  G3c --> |P2| G4d[Final Novice]
+  G3c --> |P3-P6| G4e[Final Rookie]
+
+  G3d --> |P1-P6| G5a[Kualifikasi Final Rookie]
+  G3d --> |P7| G4f[Final Beginner]
+
+  G5a --> |P1-P6| G4e
+  G5a --> |P7| G4f
+
+  G3b --> |P1| G3a
+  G3b --> |P2-P5| G4c[Final Pro]
+  G3b --> |P6-P8| G4d
+
+  G3a --> |P1-P4| G4a[Final Grand Champion]
+  G3a --> |P5-P6| G4b[Final Champion]
+```
+
+## 8 Grup
+
+```mermaid
+flowchart TD
+  H1[Moto 1-2] --> |P1-P4| H3a[Quarter Final]
+  H1 --> |P5| H3b[Final Rookie]
+  H1 --> |P6| H3c[Final Beginner]
+  H1 --> |P7| H3d[Final Amateur]
+  H1 --> |P8| H3e[Final Newbie]
+
+  H3a --> |P1-P4| H4a[Semifinal]
+  H3a --> |P5-P6| H4b[Final Pro]
+  H3a --> |P7-P8| H4c[Final Novice]
+
+  H4a --> |P1-P4| H5a[Final Grand Champion]
+  H4a --> |P5-P6| H5b[Final Champion]
+```
