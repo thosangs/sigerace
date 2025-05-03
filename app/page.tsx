@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </Link>
         <Link
-          href="https://www.youtube.com/watch?v=Da62SeadvQw"
+          href="https://www.youtube.com/@PLABandarLampung"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-background via-background to-background/90 text-secondary-foreground rounded-lg p-4 flex items-center justify-between hover:from-primary/10 hover:via-accent/20 hover:to-accent/10 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring transition-all duration-300"
