@@ -2,12 +2,12 @@ import sponsor from "@/lib/sponsor";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Peraturan | Sigerace 2025",
+  title: "Sponsor | Sigerace 2025",
   description:
-    "Peraturan umum yang wajib diikuti oleh peserta Sigerace 2025 | by Pushbike Lampung Academy",
+    "Sponsor yang telah mendukung Sigerace 2025 | by Pushbike Lampung Academy",
 };
 
-export default function Peraturan() {
+export default function Sponsor() {
   return (
     <div className="px-2 py-4 mb-12">
       <div className="w-full max-w-3xl bg-background rounded-lg shadow-lg p-6">
