@@ -8,6 +8,7 @@ import {
   BookIcon,
   QrCodeIcon,
   IconGift,
+  IconYoutube,
 } from "@/components/ui/icons";
 import Image from "next/image";
 import logo_text_image from "@/public/logo-text.webp";
@@ -54,6 +55,18 @@ export default function Home() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
             </span>
           </div>
+        </Link>
+        <Link
+          href="https://www.youtube.com/watch?v=Da62SeadvQw"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-background via-background to-background/90 text-secondary-foreground rounded-lg p-4 flex items-center justify-between hover:from-primary/10 hover:via-accent/20 hover:to-accent/10 hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring transition-all duration-300"
+        >
+          <div className="flex items-center gap-2">
+            <IconYoutube className="w-6 h-6" />
+            <span>Live Streaming</span>
+          </div>
+          <ChevronRightIcon className="w-6 h-6" />
         </Link>
         <Link
           href="/jadwal"
